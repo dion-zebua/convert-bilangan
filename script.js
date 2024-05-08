@@ -116,13 +116,18 @@ const caraPengerjaan = document.querySelector('#caraPengerjaan')
 function errorMessageFunction(){
     errorMessage.classList.add('!flex')
     caraPengerjaan.classList.add('!flex')
+    setTimeout(() => {
+        errorMessage.classList.remove('!flex')
+        caraPengerjaan.classList.remove('!flex')
+    } , 30000)
     
 }
 const form = document.querySelector('form')
 const hasilSection = document.querySelector("#hasil") 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-    hasilSection.scrollIntoView({behavior: 'smooth'})
+    hasilTop = hasilSection.getBoundingClientRect().top + window.scrollX
+    window.scrollTo({top: hasilTop, behavior: "smooth"})
     // listHasil.forEach(e => {
     // })
     errorMessageFunction()

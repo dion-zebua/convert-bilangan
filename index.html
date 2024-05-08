@@ -26,7 +26,7 @@
 
 <!-- <body class="before: overflow-x-hidden font-['Roboto_Slab'] bg-slate-200 dark:bg-slate-900"> -->
 
-<body class="bg-slate-200 dark:bg-slate-900 font-['Roboto_Slab']">
+<body class="bg-slate-100 dark:bg-slate-900 font-['Roboto_Slab']">
     <div class="h-screen w-full absolute bg-gradient-to-tr from-sky-100 from-0% via-slate-200 via-20% to-sky-100 to-80% 
 dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900"></div>
     <div
@@ -114,7 +114,7 @@ dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900"></div>
                         <input autocomplete="off" id="inputAngka" type="text"
                             class="pe-5 placeholder:text-slate-400 dark:placeholder:text-slate-300 w-full bg-transparent outline-none"
                             placeholder="Input angka Biner...">
-                        <div class="whitespace-nowrap z-10 font-sans font-semibold text-slate-300 dark:text-slate-500">
+                        <div class="whitespace-nowrap z-10 font-sans font-semibold text-slate-400 dark:text-slate-500">
                             Ctrl <span class="text-slate-400 font-bold">K</span>
                         </div>
                     </form>
@@ -126,15 +126,20 @@ dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900"></div>
     </header>
 
     <main>
-        <div class="px-5 [&>div]:mt-[20vh] relative max-w-md sm:max-w-5xl xl:max-w-6xl mx-auto" id="hasil">
-            <!-- Hasil -->
-            <div class="relative ">
+        <!-- Hasil -->
+        <div class="h-screen px-5 [&>div]:mt-[20vh] relative max-w-md sm:max-w-5xl xl:max-w-6xl mx-auto overflow-x-hidden"
+            id="hasil">
+            <div
+                class="-z-10 fixed top-28 translate-x-14 sm:-translate-x-52 right-1/2 bg-gradient-to-l from-sky-400 
+                via-sky-300 to-sky-500 from-25% via-50% to-75% dark:bg-slate-800 h-80 w-56 blur-3xl opacity-20 md:opacity-25 md:dark:opacity-10 -rotate-45">
+            </div>
 
+            <div class="relative ">
                 <h2
                     class="leading-10 lg:!leading-[55px] font-['Poppins'] text-slate-900 font-extrabold text-2xl sm:text-3xl lg:text-4xl lg:max-w-4xl tracking-tight text-center mx-auto dark:text-white">
                     Hasil
                 </h2>
-                <div class="mt-6 sm:mt-10 flex flex-col items-center text-sm gap-y-5">
+                <div class="relative mt-6 sm:mt-10 flex flex-col items-center text-sm gap-y-5">
                     <p class="text-sm text-yellow-500 text-center hidden flex-col items-center justify-center w-full sm:w-72"
                         id="errorMessage">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
@@ -147,33 +152,39 @@ dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900"></div>
                             Maaf,<span class="font-medium">&nbsp;Budi!&nbsp;</span>Baru bikin style, belum ada logic.
                         </span>
                     </p>
+
                     <div class="w-full sm:w-80 lg:w-[400px] list-hasil">
                         <label for="Desimal"
-                            class="block mb-1 text-base text-slate-700 dark:text-slate-300">Desimal</label>
+                            class="block mb-1 text-base text-slate-700 dark:text-slate-300 cursor-pointer">Desimal</label>
                         <input type="text" id="Desimal"
-                            class="px-4 text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-400 dark:border-slate-600 shadow-lg rounded-lg w-full h-12 sm:h-10 placeholder-slate-400  focus:outline-none focus:border-red-600 dark:focus:border-red-700 focus:border-[3px]"
+                            class="px-4 text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-400 dark:border-slate-600 shadow-xl rounded-lg w-full h-12 sm:h-10 placeholder-slate-400  focus:outline-none focus:border-red-600 dark:focus:border-red-700 focus:border-[3px]"
                             value="" readonly placeholder="Biner belum diinput!">
                     </div>
                     <div class="w-full sm:w-80 lg:w-[400px] list-hasil">
-                        <label for="Oktal" class="block mb-1 text-base text-slate-700 dark:text-slate-300">Oktal</label>
+                        <label for="Oktal"
+                            class="block mb-1 text-base text-slate-700 dark:text-slate-300 cursor-pointer">Oktal</label>
                         <input type="text" id="Oktal"
-                            class="px-4 text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-400 dark:border-slate-600 shadow-lg rounded-lg w-full h-12 sm:h-10 placeholder-slate-400  focus:outline-none focus:border-red-600 dark:focus:border-red-700 focus:border-[3px]"
+                            class="px-4 text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-400 dark:border-slate-600 shadow-xl rounded-lg w-full h-12 sm:h-10 placeholder-slate-400  focus:outline-none focus:border-red-600 dark:focus:border-red-700 focus:border-[3px]"
                             value="" readonly placeholder="Biner belum diinput!">
                     </div>
                     <div class="w-full sm:w-80 lg:w-[400px] list-hasil">
                         <label for="Hexadesimal"
-                            class="block mb-1 text-base text-slate-700 dark:text-slate-300">Hexadesimal</label>
+                            class="block mb-1 text-base text-slate-700 dark:text-slate-300 cursor-pointer">Hexadesimal</label>
                         <input type="text" id="Hexadesimal"
-                            class="px-4 text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-400 dark:border-slate-600 shadow-lg rounded-lg w-full h-12 sm:h-10 placeholder-slate-400  focus:outline-none focus:border-red-600 dark:focus:border-red-700 focus:border-[3px]"
+                            class="px-4 text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-400 dark:border-slate-600 shadow-xl rounded-lg w-full h-12 sm:h-10 placeholder-slate-400  focus:outline-none focus:border-red-600 dark:focus:border-red-700 focus:border-[3px]"
                             value="" readonly placeholder="Biner belum diinput!">
                     </div>
 
 
                 </div>
             </div>
+        </div>
 
-            <!-- Cara Pengerjaan -->
-            <div>
+        <!-- Cara Pengerjaan -->
+        <div class="px-5 [&>div]:mt-[20vh] relative max-w-md sm:max-w-5xl xl:max-w-6xl mx-auto overflow-x-hidden"
+            id="cara-pengerjaan">
+
+            <div class="relative">
                 <h2
                     class="leading-10 lg:!leading-[55px] font-['Poppins'] text-slate-900 font-extrabold text-2xl sm:text-3xl lg:text-4xl lg:max-w-4xl tracking-tight text-center mx-auto dark:text-white">
                     Cara Pengerjaan
@@ -189,7 +200,8 @@ dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900"></div>
                         </svg>
                         <span>
                             Jika hasil di atas dan hasil pada cara pengerjaan di bawah <span
-                                class="font-mediun">&nbsp;Tidak Sama!&nbsp;</span>Mohon kabarin saya.
+                                class="font-mediun">&nbsp;Tidak
+                                Sama!&nbsp;</span>Mohon kabarin saya.
                         </span>
                     </p>
                     <div class="w-full sm:w-80">
@@ -198,6 +210,7 @@ dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900"></div>
 
 
                 </div>
+
             </div>
         </div>
     </main>
