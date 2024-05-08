@@ -15,7 +15,7 @@
         rel="stylesheet" />
     <meta property="og:image" content="./thumbnail.webp">
     <link rel="shortcut icon" href="./thumbnail.webp" type="image/x-icon">
-    
+
     <script>
         tailwind.config = {
             content: ["./index.html", "./script.js"],
@@ -25,10 +25,14 @@
 </head>
 
 <!-- <body class="before: overflow-x-hidden font-['Roboto_Slab'] bg-slate-200 dark:bg-slate-900"> -->
-<body class="before: overflow-x-hidden font-['Roboto_Slab'] bg-gradient-to-r 
-from-sky-100 from-0% via-slate-200 via-20% to-sky-100 to-80% 
-dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
-    <div class="absolute inset-0 bg-[url('./border-light.svg')] dark:bg-[url('./border-dark.svg')] opacity-50 dark:opacity-40"></div>
+
+<body class="bg-slate-200 dark:bg-slate-900 font-['Roboto_Slab']">
+    <div class="h-screen w-full absolute bg-gradient-to-tr from-sky-100 from-0% via-slate-200 via-20% to-sky-100 to-80% 
+dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900"></div>
+    <div
+        class="absolute inset-0 bg-[url('./border-light.svg')] dark:bg-[url('./border-dark.svg')] opacity-70 dark:opacity-50">
+    </div>
+
     <!-- Header / Banner -->
     <header>
         <!-- Toggle for DarkMode -->
@@ -88,7 +92,7 @@ dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
                         </div>
 
                         <div id="container-menu-button"
-                            class="absolute right-0 -z-10 top-0 mt-4 transition-all duration-500 w-56 origin-top-right rounded-md bg-white dark:bg-slate-950 shadow-lg dark:shadow-gray-800 ring-1 ring-black ring-opacity-0 focus:outline-none">
+                            class="absolute right-0 -z-10 top-0 mt-4 transition-all duration-500 w-56 origin-top-right rounded-md bg-white dark:bg-slate-950 shadow-lg ring-1 ring-black ring-opacity-0 focus:outline-none">
                             <div
                                 class="hidden py-1 [&_a]:text-gray-700 hover:[&_a]:bg-slate-200 [&_a]:dark:text-gray-300 dark:hover:[&_a]:bg-slate-800 [&_a]:block [&_a]:px-4 [&_a]:py-2 [&_a]:text-[15px]">
                                 <a href="javascript:void(0)">Desimal</a>
@@ -124,7 +128,8 @@ dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
     <main>
         <div class="px-5 [&>div]:mt-[20vh] relative max-w-md sm:max-w-5xl xl:max-w-6xl mx-auto" id="hasil">
             <!-- Hasil -->
-            <div>
+            <div class="relative ">
+
                 <h2
                     class="leading-10 lg:!leading-[55px] font-['Poppins'] text-slate-900 font-extrabold text-2xl sm:text-3xl lg:text-4xl lg:max-w-4xl tracking-tight text-center mx-auto dark:text-white">
                     Hasil
@@ -142,20 +147,20 @@ dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
                             Maaf,<span class="font-medium">&nbsp;Budi!&nbsp;</span>Baru bikin style, belum ada logic.
                         </span>
                     </p>
-                    <div class="w-full sm:w-80 list-hasil">
+                    <div class="w-full sm:w-80 lg:w-[400px] list-hasil">
                         <label for="Desimal"
                             class="block mb-1 text-base text-slate-700 dark:text-slate-300">Desimal</label>
                         <input type="text" id="Desimal"
                             class="px-4 text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-400 dark:border-slate-600 shadow-lg rounded-lg w-full h-12 sm:h-10 placeholder-slate-400  focus:outline-none focus:border-red-600 dark:focus:border-red-700 focus:border-[3px]"
                             value="" readonly placeholder="Biner belum diinput!">
                     </div>
-                    <div class="w-full sm:w-80 list-hasil">
+                    <div class="w-full sm:w-80 lg:w-[400px] list-hasil">
                         <label for="Oktal" class="block mb-1 text-base text-slate-700 dark:text-slate-300">Oktal</label>
                         <input type="text" id="Oktal"
                             class="px-4 text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-400 dark:border-slate-600 shadow-lg rounded-lg w-full h-12 sm:h-10 placeholder-slate-400  focus:outline-none focus:border-red-600 dark:focus:border-red-700 focus:border-[3px]"
                             value="" readonly placeholder="Biner belum diinput!">
                     </div>
-                    <div class="w-full sm:w-80 list-hasil">
+                    <div class="w-full sm:w-80 lg:w-[400px] list-hasil">
                         <label for="Hexadesimal"
                             class="block mb-1 text-base text-slate-700 dark:text-slate-300">Hexadesimal</label>
                         <input type="text" id="Hexadesimal"
@@ -183,7 +188,8 @@ dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
                                 clip-rule="evenodd"></path>
                         </svg>
                         <span>
-                            Jika hasil di atas dan hasil pada cara pengerjaan di bawah <span class="font-mediun">&nbsp;Tidak Sama!&nbsp;</span>Mohon kabarin saya.
+                            Jika hasil di atas dan hasil pada cara pengerjaan di bawah <span
+                                class="font-mediun">&nbsp;Tidak Sama!&nbsp;</span>Mohon kabarin saya.
                         </span>
                     </p>
                     <div class="w-full sm:w-80">
