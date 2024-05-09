@@ -178,17 +178,17 @@ const clearInputRes = function (param) {
 
 // ERROR
 const errorMessage = document.querySelector('#errorMessage')
-const caraPengerjaan = document.querySelector('#caraPengerjaan')
+// const caraPengerjaan = document.querySelector('#caraPengerjaan')
 function errorMessageFunction(param) {
     errorMessage.classList.add('!flex')
-    caraPengerjaan.classList.add('!flex')
+    // caraPengerjaan.classList.add('!flex')
     if (param == 'clear') {
         errorMessage.classList.remove('!flex')
-        caraPengerjaan.classList.remove('!flex')
+        // caraPengerjaan.classList.remove('!flex')
     }
     setTimeout(() => {
         errorMessage.classList.remove('!flex')
-        caraPengerjaan.classList.remove('!flex')
+        // caraPengerjaan.classList.remove('!flex')
     }, 30000)
 
 }
