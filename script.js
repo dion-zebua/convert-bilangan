@@ -102,6 +102,19 @@ let getBilangan = function(item) {
         el.lastElementChild.setAttribute('placeholder', item + ' belum diinput!')
     })
 }
+const hasilConvert = function(){
+
+    const bilanganActive = menuButton.children[0].innerText
+
+    if(bilanganActive == 'Biner'){
+        let hasil = parseInt(inputAngka.value, 2)
+        if(!hasil){
+            errorMessageFunction()
+        }
+    }else{
+        errorMessageFunction()
+    }
+}
 listMenuButton.forEach(e => {
     e.addEventListener('click', (i) => {
         inputAngka.setAttribute('placeholder', 'Input angka ' + e.innerHTML +'...')
@@ -128,7 +141,6 @@ form.addEventListener('submit', function (event) {
     event.preventDefault();
     hasilTop = hasilSection.getBoundingClientRect().top + window.scrollX
     window.scrollTo({top: hasilTop, behavior: "smooth"})
-    // listHasil.forEach(e => {
-    // })
+    hasilConvert()
     errorMessageFunction()
 });
