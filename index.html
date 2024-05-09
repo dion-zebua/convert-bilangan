@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 
 <head>
     <meta charset="UTF-8" />
@@ -66,7 +66,7 @@
 
 <body class="bg-slate-200 dark:bg-slate-900 font-['Roboto_Slab']">
     <div class="h-screen w-full absolute bg-gradient-to-tr from-sky-100 from-0% via-slate-200 via-20% to-sky-100 to-80% 
-dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900"></div>
+dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900 overflow-hidden"></div>
     <div
         class="absolute inset-0 bg-[url('./border-light.svg')] dark:bg-[url('./border-dark.svg')] opacity-70 dark:opacity-50">
     </div>
@@ -163,7 +163,7 @@ dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900"></div>
         </div>
     </header>
 
-    <main>
+    <main class="hidden">
         <!-- Hasil -->
         <div class="h-screen px-5 [&>div]:mt-[10vh] relative max-w-md sm:max-w-5xl xl:max-w-6xl mx-auto overflow-x-hidden"
             id="hasil">
@@ -206,6 +206,7 @@ dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900"></div>
                                 <input type="text" id="Desimal"
                                     class="px-4 text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-400 dark:border-slate-600 shadow-xl rounded-lg w-full h-12 sm:h-10 placeholder-slate-400  focus:outline-none focus:border-red-600 dark:focus:border-red-700 focus:border-[3px]"
                                     value="" readonly placeholder="Biner belum diinput!">
+                                    <a href="#cara-pengerjaan" class="text-sky-600 dark:text-sky-400 underline tracking-[0.5px]">lihat cara pengerjaan</a>
                             </div>
                             <div class="w-full list-hasil">
                                 <label for="Oktal"
@@ -213,6 +214,7 @@ dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900"></div>
                                 <input type="text" id="Oktal"
                                     class="px-4 text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-400 dark:border-slate-600 shadow-xl rounded-lg w-full h-12 sm:h-10 placeholder-slate-400  focus:outline-none focus:border-red-600 dark:focus:border-red-700 focus:border-[3px]"
                                     value="" readonly placeholder="Biner belum diinput!">
+                                    <a href="#cara-pengerjaan" class="text-sky-600 dark:text-sky-400 underline tracking-[0.5px]">lihat cara pengerjaan</a>
                             </div>
                             <div class="w-full list-hasil">
                                 <label for="Hexadesimal"
@@ -220,6 +222,7 @@ dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900"></div>
                                 <input type="text" id="Hexadesimal"
                                     class="px-4 text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-400 dark:border-slate-600 shadow-xl rounded-lg w-full h-12 sm:h-10 placeholder-slate-400  focus:outline-none focus:border-red-600 dark:focus:border-red-700 focus:border-[3px]"
                                     value="" readonly placeholder="Biner belum diinput!">
+                                    <a href="#cara-pengerjaan" class="text-sky-600 dark:text-sky-400 underline tracking-[0.5px]">lihat cara pengerjaan</a>
                             </div>
                         </div>
                     </div>
@@ -249,10 +252,13 @@ dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900"></div>
                                 clip-rule="evenodd"></path>
                         </svg>
                         <span>
+                            Bentar lagi dibikin
+                        </span>
+                        <!-- <span>
                             Jika hasil di atas dan hasil pada cara pengerjaan di bawah <span
                                 class="font-mediun">&nbsp;Tidak
                                 Sama!&nbsp;</span>Mohon kabarin saya.
-                        </span>
+                        </span> -->
                     </p>
                     <div class="w-full sm:w-80">
 
@@ -264,7 +270,7 @@ dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900"></div>
             </div>
         </div>
     </main>
-    <footer>
+    <footer class="hidden">
         <br><br><br><br><br><br><br><br><br><br>
     </footer>
 
