@@ -102,8 +102,8 @@ let getBilangan = function (item) {
         el.innerHTML = filterBilangan[index]
     })
     listHasil.forEach((el, index) => {
-        el.children[1].innerHTML = filterBilangan[index]
-        el.children[1].setAttribute('for', filterBilangan[index])
+        el.children[0].innerHTML = filterBilangan[index]
+        el.children[0].setAttribute('for', filterBilangan[index])
         el.children[1].setAttribute('id', filterBilangan[index])
         el.children[1].setAttribute('placeholder', item + ' belum diinput!')
         el.children[1].value = ''
