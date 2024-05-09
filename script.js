@@ -200,6 +200,9 @@ const form = document.querySelector('form')
 const hasilSection = document.querySelector("#hasil")
 form.addEventListener('submit', function (event) {
     event.preventDefault();
+    mainSection.classList.remove('hidden')
+    footerSection.classList.remove('hidden')
+    document.body.classList.remove('overflow-hidden')
     hasilTop = hasilSection.getBoundingClientRect().top + window.scrollX
     window.scrollTo({ top: hasilTop, behavior: "smooth" })
     hasilConvert()
