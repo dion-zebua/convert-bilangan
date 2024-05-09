@@ -102,11 +102,11 @@ let getBilangan = function (item) {
         el.innerHTML = filterBilangan[index]
     })
     listHasil.forEach((el, index) => {
-        el.firstElementChild.innerHTML = filterBilangan[index]
-        el.firstElementChild.setAttribute('for', filterBilangan[index])
-        el.lastElementChild.setAttribute('id', filterBilangan[index])
-        el.lastElementChild.setAttribute('placeholder', item + ' belum diinput!')
-        el.lastElementChild.value = ''
+        el.children[1].innerHTML = filterBilangan[index]
+        el.children[1].setAttribute('for', filterBilangan[index])
+        el.children[1].setAttribute('id', filterBilangan[index])
+        el.children[1].setAttribute('placeholder', item + ' belum diinput!')
+        el.children[1].value = ''
     })
 }
 
@@ -141,13 +141,13 @@ const hasilConvert = function () {
         setHexadesimal(desimalRes.toString(16).toUpperCase())
     }
     else if (bilanganActive == 'Oktal' && /^[0-7]+$/.test(inputAngka)) {
-        let desimalRes = parseInt(inputAngka , 8)
+        let desimalRes = parseInt(inputAngka, 8)
         setBiner(desimalRes.toString(2))
         setDesimal(desimalRes)
         setHexadesimal(desimalRes.toString(16).toUpperCase())
     }
     else if (bilanganActive == 'Hexadesimal' && /^[0-9A-Fa-f]+$/.test(inputAngka)) {
-        let desimalRes = parseInt(inputAngka , 16)
+        let desimalRes = parseInt(inputAngka, 16)
         setBiner(desimalRes.toString(2))
         setDesimal(desimalRes)
         setOktal(desimalRes.toString(8))
@@ -173,6 +173,7 @@ const clearInputRes = function (param) {
     inputAngka.setAttribute('placeholder', 'Input angka ' + param + '...')
     hiddenSelector()
     getBilangan(param)
+
 }
 
 // ERROR
@@ -199,9 +200,6 @@ const form = document.querySelector('form')
 const hasilSection = document.querySelector("#hasil")
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-    mainSection.classList.remove('hidden')
-    footerSection.classList.remove('hidden')
-    document.body.classList.remove('hidden')
     hasilTop = hasilSection.getBoundingClientRect().top + window.scrollX
     window.scrollTo({ top: hasilTop, behavior: "smooth" })
     hasilConvert()
