@@ -66,7 +66,7 @@ function showSelector() {
     containerMenuButton.classList.add('!top-full')
     containerMenuButton.classList.add('!ring-opacity-5')
     containerMenuButton.classList.add('!z-10')
-    buttonInputAngka.classList.add('!opacity-50')
+    buttonInputAngka.classList.add('opacity-50')
 }
 
 function hiddenSelector() {
@@ -75,7 +75,7 @@ function hiddenSelector() {
     containerMenuButton.classList.remove('!top-full')
     containerMenuButton.classList.remove('!ring-opacity-5')
     containerMenuButton.classList.remove('!z-10')
-    buttonInputAngka.classList.remove('!opacity-50')
+    buttonInputAngka.classList.remove('opacity-50')
 }
 
 menuButton.addEventListener('click', () => {
