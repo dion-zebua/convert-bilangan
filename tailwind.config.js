@@ -38,7 +38,11 @@ module.exports = {
           },
         }
       }
-    }
+    },
+    fontFamily: {
+      'poppins': "'Poppins'",
+      'roboto-slab': "'Roboto Slab'",
+    },
   },
   plugins: [],
 }

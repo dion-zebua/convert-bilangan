@@ -1,0 +1,24 @@
+{
+  "name": "convert-bilangan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tw": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dion-zebua/convert-bilangan.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dion-zebua/convert-bilangan/issues"
+  },
+  "homepage": "https://github.com/dion-zebua/convert-bilangan#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}

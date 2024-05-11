@@ -111,19 +111,26 @@ let getBilangan = function (item) {
 
 // Hasil Convert
 const hasilConvert = function () {
-    let setBiner = e => {
+    // Hasil Convert
+    const setBiner = e => {
         document.querySelector('input#Biner').value = e
     }
-    let setDesimal = e => {
+    const setDesimal = e => {
         document.querySelector('input#Desimal').value = e
     }
-    let setOktal = e => {
+    const setOktal = e => {
         document.querySelector('input#Oktal').value = e
     }
-    let setHexadesimal = e => {
+    const setHexadesimal = e => {
         document.querySelector('input#Hexadesimal').value = e;
     }
 
+    // Cara Convert
+    const binerToDesimal = e => {
+        
+    }
+
+    // Logic Hasil
     errorMessageFunction('clear')
     let bilanganActive = menuButton.children[0].innerText
     let inputAngka = document.querySelector('#inputAngka').value
@@ -180,14 +187,14 @@ const errorMessage = document.querySelector('#errorMessage')
 const caraPengerjaan = document.querySelector('#caraPengerjaan')
 function errorMessageFunction(param) {
     errorMessage.classList.add('!flex')
-    caraPengerjaan.classList.add('!flex')
+    // caraPengerjaan.classList.add('!flex')
     if (param == 'clear') {
         errorMessage.classList.remove('!flex')
-        caraPengerjaan.classList.remove('!flex')
+        // caraPengerjaan.classList.remove('!flex')
     }
     setTimeout(() => {
         errorMessage.classList.remove('!flex')
-        caraPengerjaan.classList.remove('!flex')
+        // caraPengerjaan.classList.remove('!flex')
     }, 30000)
 
 }
