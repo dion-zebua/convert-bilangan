@@ -109,6 +109,8 @@ let getBilangan = function (item) {
     })
 }
 
+
+
 // Hasil Convert
 const hasilConvert = function () {
     // Hasil Convert
@@ -126,8 +128,33 @@ const hasilConvert = function () {
     }
 
     // Cara Convert
+    let isiCaraPengerjaan = document.querySelector('#cara-pengerjaan #isiContainer')
+    isiCaraPengerjaan.innerHTML = ''
     const binerToDesimal = e => {
-        
+        let total = document.createElement('div')
+        total.classList.add('isi')
+        let hasilTotal = 0
+        e.split('').reverse().forEach((item, index) => {
+            let cara = document.createElement('div')
+            cara.classList.add('isi')
+            let hasil = item * (2 ** index)
+            cara.innerHTML = `<span class="number1">${item}</span>&nbsp;
+                                <span class="div">*</span>&nbsp;
+                                <span class="number2">2&Hat;${index}</span>&nbsp;
+                                <span class="equal">=</span>&nbsp;
+                                <span class="resultDiv">${hasil}</span>&nbsp;`
+            isiCaraPengerjaan.appendChild(cara)
+            hasilTotal = hasilTotal + hasil
+        });
+        total.innerHTML = `Total ${e}. Jadi, ${e} Biner adalah adalah ${hasilTotal} Desimal`
+        isiCaraPengerjaan.appendChild(total)
+
+    }
+    const binerToOktal = e => {
+        // console.log(e)
+    }
+    const binerToHexadesimal = e => {
+        // console.log(e)
     }
 
     // Logic Hasil
@@ -139,6 +166,10 @@ const hasilConvert = function () {
         setDesimal(desimalRes)
         setOktal(desimalRes.toString(8))
         setHexadesimal(desimalRes.toString(16).toUpperCase())
+
+        binerToDesimal(inputAngka)
+        binerToOktal(inputAngka.toString(8))
+        binerToHexadesimal(inputAngka.toString(16).toUpperCase())
     }
     else if (bilanganActive == 'Desimal' && /^[0-9]+$/.test(inputAngka)) {
         let desimalRes = parseInt(inputAngka)
@@ -159,9 +190,11 @@ const hasilConvert = function () {
         setOktal(desimalRes.toString(8))
     }
     else {
-        errorMessageFunction()
         clearInputRes(bilanganActive)
         inputAngka.value = ''
+        if (inputAngka != '') { 
+            errorMessageFunction()
+        }
     }
 }
 
@@ -187,14 +220,14 @@ const errorMessage = document.querySelector('#errorMessage')
 const caraPengerjaan = document.querySelector('#caraPengerjaan')
 function errorMessageFunction(param) {
     errorMessage.classList.add('!flex')
-    // caraPengerjaan.classList.add('!flex')
+    caraPengerjaan.classList.add('!flex')
     if (param == 'clear') {
         errorMessage.classList.remove('!flex')
-        // caraPengerjaan.classList.remove('!flex')
+        caraPengerjaan.classList.remove('!flex')
     }
     setTimeout(() => {
         errorMessage.classList.remove('!flex')
-        // caraPengerjaan.classList.remove('!flex')
+        caraPengerjaan.classList.remove('!flex')
     }, 30000)
 
 }

@@ -18,11 +18,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="bg-slate-200 dark:bg-slate-900 font-poppins">
-    <div class="h-screen w-full absolute bg-gradient-to-tr from-sky-100 from-0% via-slate-200 via-20% to-sky-100 to-80% 
-dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900 overflow-hidden"></div>
+<body class="bg-white dark:bg-slate-900 font-poppins">
     <div
-        class="absolute inset-0 bg-[url('../img/border-light.svg')] dark:bg-[url('../img/border-dark.svg')] opacity-90 dark:opacity-70">
+        class="h-screen w-full absolute bg-gradient-to-tr from-sky-100 from-5% via-slate-100 via-50% to-sky-100 to-80% dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 overflow-hidden">
+    </div>
+    <div
+        class="absolute inset-0 bg-[url('../img/border-light.svg')] dark:bg-[url('../img/border-dark.svg')] opacity-70 dark:opacity-80">
     </div>
 
     <!-- Header / Banner -->
@@ -97,7 +98,7 @@ dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900 overflow-h
                         </div>
                     </div>
                     <form id="searchAngka"
-                        class="sm:opacity-100 flex items-center w-full sm:w-72 text-left space-x-3 px-4 h-12 bg-white hover:bg-slate-100 shadow-lg rounded-lg text-slate-400 dark:bg-slate-800 dark:ring-0 dark:text-slate-300 dark:highlight-white/5 dark:hover:bg-slate-700">
+                        class="sm:opacity-100 flex items-center w-full sm:w-72 text-left space-x-3 px-4 h-12 bg-slate-50 hover:bg-white shadow-lg rounded-lg text-slate-400 dark:bg-slate-800 dark:ring-0 dark:text-slate-300 dark:highlight-white/5 dark:hover:bg-slate-700">
                         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round"
                             class="flex-none text-slate-300 dark:text-slate-400" aria-hidden="true">
@@ -118,9 +119,9 @@ dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900 overflow-h
         </div>
     </header>
 
-    <main class="">
+    <main class="hidden">
         <!-- Hasil -->
-        <div class="h-screen px-5 [&>div]:mt-[10vh] relative max-w-md sm:max-w-5xl xl:max-w-6xl mx-auto overflow-x-hidden"
+        <div class="h-screen overflow-hidden px-5 [&>div]:mt-[10vh] relative max-w-md sm:max-w-5xl xl:max-w-6xl mx-auto overflow-x-hidden"
             id="hasil">
             <div
                 class="-z-10 fixed top-28 translate-x-14 sm:-translate-x-52 right-1/2 bg-gradient-to-l from-sky-300 via-sky-300 to-sky-200 from-25% via-50% to-75% dark:bg-slate-800 h-80 w-56 blur-3xl opacity-20 md:opacity-25 md:dark:opacity-10 -rotate-45">
@@ -145,7 +146,7 @@ dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900 overflow-h
                         </span>
                     </p>
                     <div
-                        class="w-full sm:w-80 lg:w-[400px] relative [&>.garis]:animate-[rotate_1s_infinite] [&>.garis]:rotate-6 [&_.garis]:h-[1px] [&_.garis]:w-[calc(50%+30px)] [&_.garis]:absolute [&_.garis]:from-indigo-500 [&_.garis]:from-10% [&_.garis]:via-sky-300 [&_.garis]:via-30% [&_.garis]:to-slate-300 [&_.garis]:to-90% dark:[&_.garis]:from-indigo-900 dark:[&_.garis]:via-sky-600 dark:[&_.garis]:to-slate-800">
+                        class="w-full sm:w-80 lg:w-[400px] relative [&>.garis]:rotate-6 [&_.garis]:h-[1px] [&_.garis]:w-[calc(50%+30px)] [&_.garis]:absolute [&_.garis]:from-indigo-400 [&_.garis]:from-10% [&_.garis]:via-sky-300 [&_.garis]:via-30% [&_.garis]:to-slate-300 [&_.garis]:to-90% dark:[&_.garis]:from-indigo-900 dark:[&_.garis]:via-sky-900 dark:[&_.garis]:to-slate-800">
                         <div class="garis -left-[30px] top-0 bg-gradient-to-l"></div>
                         <div class="garis -right-[30px] top-0 bg-gradient-to-r"></div>
                         <div class="garis -left-[30px] bottom-0 bg-gradient-to-l"></div>
@@ -159,31 +160,28 @@ dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900 overflow-h
                                 <label for="Desimal"
                                     class="block mb-1 text-base text-slate-700 dark:text-slate-300 cursor-pointer">Desimal</label>
                                 <input type="text" id="Desimal"
-                                    class="px-4 text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-400 dark:border-slate-600 shadow-xl rounded-lg w-full h-12 sm:h-10 placeholder-slate-400  focus:outline-none focus:border-red-600 dark:focus:border-red-700 focus:border-[3px]"
+                                    class="mb-2 px-4 text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-400 dark:border-slate-600 shadow-xl rounded-lg w-full h-12 sm:h-10 placeholder-slate-400  focus:outline-none focus:border-red-600 dark:focus:border-red-700 focus:border-[3px]"
                                     value="" readonly placeholder="Biner belum diinput!">
                                 <a href="#cara-pengerjaan"
-                                    class="text-sky-600 dark:text-sky-400 underline tracking-[0.5px]">lihat cara
-                                    pengerjaan</a>
+                                    class="text-sky-600 dark:text-sky-400 text-xs text-right block">#lihat cara...</a>
                             </div>
                             <div class="w-full list-hasil">
                                 <label for="Oktal"
                                     class="block mb-1 text-base text-slate-700 dark:text-slate-300 cursor-pointer">Oktal</label>
                                 <input type="text" id="Oktal"
-                                    class="px-4 text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-400 dark:border-slate-600 shadow-xl rounded-lg w-full h-12 sm:h-10 placeholder-slate-400  focus:outline-none focus:border-red-600 dark:focus:border-red-700 focus:border-[3px]"
+                                    class="mb-2 px-4 text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-400 dark:border-slate-600 shadow-xl rounded-lg w-full h-12 sm:h-10 placeholder-slate-400  focus:outline-none focus:border-red-600 dark:focus:border-red-700 focus:border-[3px]"
                                     value="" readonly placeholder="Biner belum diinput!">
                                 <a href="#cara-pengerjaan"
-                                    class="text-sky-600 dark:text-sky-400 underline tracking-[0.5px]">lihat cara
-                                    pengerjaan</a>
+                                    class="text-sky-600 dark:text-sky-400 text-xs text-right block">#lihat cara...</a>
                             </div>
                             <div class="w-full list-hasil">
                                 <label for="Hexadesimal"
                                     class="block mb-1 text-base text-slate-700 dark:text-slate-300 cursor-pointer">Hexadesimal</label>
                                 <input type="text" id="Hexadesimal"
-                                    class="px-4 text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-400 dark:border-slate-600 shadow-xl rounded-lg w-full h-12 sm:h-10 placeholder-slate-400  focus:outline-none focus:border-red-600 dark:focus:border-red-700 focus:border-[3px]"
+                                    class="mb-2 px-4 text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-400 dark:border-slate-600 shadow-xl rounded-lg w-full h-12 sm:h-10 placeholder-slate-400  focus:outline-none focus:border-red-600 dark:focus:border-red-700 focus:border-[3px]"
                                     value="" readonly placeholder="Biner belum diinput!">
                                 <a href="#cara-pengerjaan"
-                                    class="text-sky-600 dark:text-sky-400 underline tracking-[0.5px]">lihat cara
-                                    pengerjaan</a>
+                                    class="text-sky-600 dark:text-sky-400 text-xs text-right block">#lihat cara...</a>
                             </div>
                         </div>
                     </div>
@@ -204,7 +202,7 @@ dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900 overflow-h
                 </h2>
                 <div class="mt-6 sm:mt-10 flex flex-col text-center items-center text-sm gap-y-5">
                     <!-- <p class="text-sm text-sky-500 flex-col items-center justify-center w-full sm:w-72" -->
-                    <p class="text-sm text-sky-500 flex flex-col items-center justify-center w-full sm:w-72"
+                    <p class="text-sm text-yellow-400 dark:text-yellow-600 flex flex-col items-center justify-center w-full sm:w-72"
                         id="caraPengerjaan">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                             aria-hidden="true" class="w-5 me-2">
@@ -213,9 +211,10 @@ dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900 overflow-h
                                 clip-rule="evenodd"></path>
                         </svg>
                         <span>
-                            Jika hasil di atas dan hasil pada cara pengerjaan di bawah <span
+                            <!-- Jika hasil di atas dan hasil pada cara pengerjaan di bawah <span
                                 class="font-mediun">&nbsp;Tidak
-                                Sama!&nbsp;</span>Mohon kabarin saya.
+                                Sama!&nbsp;</span>Mohon kabarin saya. -->
+                                Masih Belum Selesai
                         </span>
                     </p>
                 </div>
@@ -223,37 +222,37 @@ dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900 overflow-h
             </div>
 
             <div class="relative !mt-6">
-                <div class="h-full w-full absolute bg-gradient-to-tr from-sky-100 from-0% via-slate-200 via-20% to-sky-100 to-80% 
-                    dark:from-slate-900 dark:via-45% dark:via-slate-950 dark:to-slate-900"></div>
                 <div
-                    class="absolute z-10 inset-0 bg-[url('../img/border-light.svg')] dark:bg-[url('../img/border-dark.svg')] opacity-90 dark:opacity-70">
+                    class="h-full w-full absolute bg-gradient-to-tr from-sky-100 from-5% via-slate-100 via-50% to-sky-100 to-80% dark:from-slate-900 dark:via-slate-950 dark:to-slate-900">
+                </div>
+                <div
+                    class="absolute z-10 inset-0 bg-[url('../img/border-light.svg')] dark:bg-[url('../img/border-dark.svg')] opacity-70 dark:opacity-80">
                 </div>
                 <div
                     class="flex justify-between items-center gap-x-8 flex-col sm:flex-row max-w-md sm:max-w-5xl xl:max-w-6xl mx-auto px-5">
                     <div
-                        class="z-10 [&>.border-cara]:bg-slate-200 dark:[&>.border-cara]:bg-slate-900 [&>.border-cara]:absolute bg-white dark:bg-slate-950 rounded-lg shadow-lg border relative border-slate-300 dark:border-slate-900 w-full sm:w-1/2 md:w-2/5 my-8">
+                        class="z-10 [&>.border-cara]:bg-slate-200 dark:[&>.border-cara]:bg-slate-900 [&>.border-cara]:absolute bg-white dark:bg-black rounded-lg shadow-lg border relative border-slate-300 dark:border-slate-900 w-full sm:w-1/2 md:w-2/5 my-8">
                         <div class="border-cara h-[1px] w-full top-5 left-0"></div>
                         <div class="border-cara h-[1px] w-full bottom-5 left-0"></div>
                         <div class="border-cara h-full w-[1px] top-0 left-5"></div>
                         <div class="border-cara h-full w-[1px] top-0 right-5"></div>
                         <div class="p-5">
                             <div class="bg-slate-100 dark:bg-[#0d1227]">
-                                <div class="border-cara h-full w-[1px] top-0 right-5"></div>
-                                <div
-                                    class="[&>.isi]:grid [&>.isi]:grid-cols-4 [&>.isi]:gap-4 [&>*]:text-sm relative [&>.isi]:shadow [&>.isi]:px-3 [&>.isi]:py-1 [&>.isi]:bg-gradient-to-l [&>.isi]:from-sky-900 [&>.isi]:to-sky-950 dark:[&>.isi]:from-sky-900 dark:[&>.isi]:to-sky-950 [&>.isi]:rounded [&>.isi]:text-slate-800 dark:[&>.isi]:text-slate-200 p-5">
-                                    <div class="isi">1</div>
+                                <!-- <div class="border-cara h-full w-[1px] top-0 right-5"></div> -->
+                                <div id="isiContainer"
+                                    class="[&_*]:text-sm relative overflow-x-auto [&_.isi]:shadow [&_.isi]:px-3 [&_.isi]:py-1 [&_.isi]:bg-gradient-to-r [&_.isi]:from-sky-500 [&_.isi]:to-sky-400 dark:[&_.isi]:from-sky-700 dark:[&_.isi]:to-sky-600 [&_.isi]:rounded [&_.isi]:mb-4 [&_.isi]:text-slate-800 dark:[&_.isi]:text-slate-200 [&_.isi]:whitespace-nowrap [&_.isi]:w-min  p-5">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="z-10 bg-slate-100 w-full sm:w-1/2 md:w-3/5">
+                    <div class="z-10 bg-white dark:bg-black rounded-lg w-full sm:w-1/2 md:w-3/5">
                         <div class="h-36"></div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <footer>
+    <footer class="hidden">
         <br><br><br><br><br><br><br><br><br><br>
     </footer>
 
