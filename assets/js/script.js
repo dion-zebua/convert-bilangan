@@ -75,6 +75,29 @@ function hiddenSelector() {
     buttonInputAngka.classList.remove('opacity-50')
 }
 
+// Syarat Menu
+const syarat = {
+    Biner: [
+        'input 0 / 1',
+    ],
+    Desimal: [
+        'input 0 - 9',
+    ],
+    Oktal: [
+        'input 0 - 7',
+    ],
+    Hexadesimal: [
+        'input 0 - 9',
+        'input A - F',
+        'A = 10',
+        'A = 11',
+        'A = 12',
+        'A = 13',
+        'A = 14',
+        'A = 15',
+    ]
+}
+
 menuButton.addEventListener('click', () => {
     if (containerMenuButton.children[0].classList.contains('hidden')) {
         showSelector()
@@ -189,7 +212,7 @@ const hasilConvert = function () {
     else {
         clearInputRes(bilanganActive)
         inputAngka.value = ''
-        if (inputAngka != '') { 
+        if (inputAngka != '') {
             errorMessageFunction()
         }
     }
@@ -237,7 +260,7 @@ const submit = document.querySelector('form .enter')
 const loading = document.querySelector('form .loading')
 const hasilSection = document.querySelector("#hasil")
 form.addEventListener('submit', function (event) {
-    event.preventDefault();    
+    event.preventDefault();
     hasilConvert()
     submit.classList.add('hidden')
     loading.classList.remove('hidden')
@@ -247,10 +270,9 @@ form.addEventListener('submit', function (event) {
         document.body.classList.remove('overflow-hidden')
         submit.classList.remove('hidden')
         loading.classList.add('hidden')
-        mainSection.scrollIntoView({behavior: 'smooth', block: 'start'})
-    } , 3000)
+        mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 500)
 });
 
 // After Change Input Value
 inputAngka.addEventListener('input', hasilConvert)
-
