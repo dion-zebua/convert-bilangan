@@ -240,14 +240,14 @@ const errorMessage = document.querySelector('#errorMessage')
 const caraPengerjaan = document.querySelector('#caraPengerjaan')
 function errorMessageFunction(param) {
     errorMessage.classList.add('!flex')
-    // caraPengerjaan.classList.add('!flex')
+    caraPengerjaan.classList.add('!flex')
     if (param == 'clear') {
         errorMessage.classList.remove('!flex')
-        // caraPengerjaan.classList.remove('!flex')
+        caraPengerjaan.classList.remove('!flex')
     }
     setTimeout(() => {
         errorMessage.classList.remove('!flex')
-        // caraPengerjaan.classList.remove('!flex')
+        caraPengerjaan.classList.remove('!flex')
     }, 30000)
 
 }
@@ -262,6 +262,7 @@ const hasilSection = document.querySelector("#hasil")
 form.addEventListener('submit', function (event) {
     event.preventDefault();
     hasilConvert()
+    inputAngka.blur()
     submit.classList.add('hidden')
     loading.classList.remove('hidden')
     setTimeout(() => {
@@ -271,7 +272,7 @@ form.addEventListener('submit', function (event) {
         submit.classList.remove('hidden')
         loading.classList.add('hidden')
         mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }, 500)
+    }, 1000)
 });
 
 // After Change Input Value
