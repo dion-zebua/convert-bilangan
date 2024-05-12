@@ -41,19 +41,12 @@ function inputFunction() {
     inputAngka.focus()
     setInterval(() => {
         if (document.activeElement.tagName == 'INPUT') {
-            buttonInputAngka.classList.add('border-2', 'border-slate-300', 'dark:border-slate-700')
+            buttonInputAngka.classList.add('border-2', 'border-sky-500', 'dark:border-sky-500')
         } else {
-            buttonInputAngka.classList.remove('border-2', 'border-slate-300', 'dark:border-slate-700')
+            buttonInputAngka.classList.remove('border-2', 'border-sky-500', 'dark:border-sky-500')
         }
     }, 1)
 }
-
-document.addEventListener('keydown', function (event) {
-    if (event.ctrlKey && event.key === 'k') {
-        event.preventDefault()
-        inputFunction()
-    }
-});
 
 // Select Bilangan
 const menuButton = document.querySelector('#menu-button')
