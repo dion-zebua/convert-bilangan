@@ -233,15 +233,22 @@ function errorMessageFunction(param) {
 const mainSection = document.querySelector('main');
 const footerSection = document.querySelector('footer');
 const form = document.querySelector('form')
+const submit = document.querySelector('form .enter')
+const loading = document.querySelector('form .loading')
 const hasilSection = document.querySelector("#hasil")
 form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    mainSection.classList.remove('hidden')
-    footerSection.classList.remove('hidden')
-    document.body.classList.remove('overflow-hidden')
-    hasilTop = hasilSection.getBoundingClientRect().top + window.scrollX
-    window.scrollTo({ top: hasilTop, behavior: "smooth" })
+    event.preventDefault();    
     hasilConvert()
+    submit.classList.add('hidden')
+    loading.classList.remove('hidden')
+    setTimeout(() => {
+        mainSection.classList.remove('hidden')
+        footerSection.classList.remove('hidden')
+        document.body.classList.remove('overflow-hidden')
+        submit.classList.remove('hidden')
+        loading.classList.add('hidden')
+        mainSection.scrollIntoView({behavior: 'smooth', block: 'start'})
+    } , 3000)
 });
 
 // After Change Input Value

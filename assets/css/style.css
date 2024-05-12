@@ -704,6 +704,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .\!block {
   display: block !important;
 }
@@ -956,6 +960,16 @@ video {
   --tw-scale-x: .9;
   --tw-scale-y: .9;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
 }
 
 .cursor-pointer {
@@ -1431,6 +1445,26 @@ video {
   fill: #f1f5f9;
 }
 
+.fill-slate-900 {
+  fill: #0f172a;
+}
+
+.stroke-slate-200 {
+  stroke: #e2e8f0;
+}
+
+.stroke-1 {
+  stroke-width: 1;
+}
+
+.stroke-\[20px\] {
+  stroke-width: 20px;
+}
+
+.stroke-\[2px\] {
+  stroke-width: 2px;
+}
+
 .p-1 {
   padding: 0.25rem;
 }
@@ -1528,6 +1562,10 @@ video {
 
 .pe-1 {
   padding-inline-end: 0.25rem;
+}
+
+.pb-1 {
+  padding-bottom: 0.25rem;
 }
 
 .text-left {
@@ -1734,6 +1772,11 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -1776,6 +1819,14 @@ video {
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 
+.first\:pt-1:first-child {
+  padding-top: 0.25rem;
+}
+
+.last\:pt-0:last-child {
+  padding-top: 0px;
+}
+
 .hover\:bg-slate-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
@@ -1793,6 +1844,18 @@ video {
 
 .hover\:fill-slate-500:hover {
   fill: #64748b;
+}
+
+.hover\:fill-slate-800:hover {
+  fill: #1e293b;
+}
+
+.hover\:fill-slate-100:hover {
+  fill: #f1f5f9;
+}
+
+.hover\:stroke-slate-800:hover {
+  stroke: #1e293b;
 }
 
 .focus\:border-\[3px\]:focus {
@@ -1947,6 +2010,10 @@ video {
   fill: #334155;
 }
 
+.dark\:stroke-slate-800:is(.dark *) {
+  stroke: #1e293b;
+}
+
 .dark\:text-black:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -2030,6 +2097,14 @@ video {
 .hover\:dark\:bg-slate-300:is(.dark *):hover {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+.hover\:dark\:fill-slate-200:is(.dark *):hover {
+  fill: #e2e8f0;
+}
+
+.hover\:dark\:stroke-slate-200:is(.dark *):hover {
+  stroke: #e2e8f0;
 }
 
 .dark\:focus\:border-red-700:focus:is(.dark *) {
@@ -2228,6 +2303,10 @@ video {
 
 .\[\&\>svg\]\:p-\[2px\]>svg {
   padding: 2px;
+}
+
+.\[\&\>svg\]\:pt-1>svg {
+  padding-top: 0.25rem;
 }
 
 .\[\&\>svg\]\:text-slate-600>svg {
@@ -2461,5 +2540,21 @@ video {
 
 .\[\&_path\]\:hover\:dark\:fill-slate-300:is(.dark *):hover path {
   fill: #cbd5e1;
+}
+
+.\[\&_svg\]\:fill-slate-200 svg {
+  fill: #e2e8f0;
+}
+
+.\[\&_svg\]\:hover\:fill-slate-800:hover svg {
+  fill: #1e293b;
+}
+
+.dark\:\[\&_svg\]\:fill-slate-800 svg:is(.dark *) {
+  fill: #1e293b;
+}
+
+.\[\&_svg\]\:hover\:dark\:fill-slate-200:is(.dark *):hover svg {
+  fill: #e2e8f0;
 }
 
