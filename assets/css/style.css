@@ -646,6 +646,10 @@ video {
   z-index: 50;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .m-2 {
   margin: 0.5rem;
 }
@@ -956,6 +960,10 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.cursor-help {
+  cursor: help;
 }
 
 .flex-col {

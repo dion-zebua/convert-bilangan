@@ -36,7 +36,11 @@ if (modeToggle) {
 // Search
 const buttonInputAngka = document.querySelector('#searchAngka')
 const inputAngka = document.querySelector('#inputAngka')
-buttonInputAngka.addEventListener('click', inputFunction)
+buttonInputAngka.addEventListener('click', (event) => {
+    if (event.target.tagName != 'svg') {
+        inputFunction()
+    }
+})
 function inputFunction() {
     inputAngka.focus()
     setInterval(() => {
