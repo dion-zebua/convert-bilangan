@@ -1,9 +1,0 @@
-                                    <!-- <div class="isi">
-                                        <span class="number1">101</span>&nbsp;
-                                        <span class="div">/</span>&nbsp;
-                                        <span class="number2">5</span>&nbsp;
-                                        <span class="equal">=</span>&nbsp;
-                                        <span class="resultDiv">20</span>&nbsp;
-                                        <span>sisa</span>&nbsp;
-                                        <span class="resultMod inline-grid w-5 h-5 place-items-center border border-slate-500 dark:border-slate-300">1</span>
-                                    </div> -->
